@@ -29,6 +29,17 @@ class SettingsState extends State<Settings> {
               },
               value: Theme.of(context).brightness == Brightness.dark,
             ),
+            SwitchListTile(
+              title: Text('Sounds'),
+              onChanged: (bool value) {
+                setState(() {
+                  OptionsHolder.of(context).options = OptionsHolder.of(context)
+                      .options
+                      .copyWith(playSounds: value);
+                });
+              },
+              value: OptionsHolder.of(context).options.playSounds,
+            ),
             ListTile(
               title: Text(NyaNyaLocalizations.of(context).languageLabel),
               trailing: DropdownButton<String>(
