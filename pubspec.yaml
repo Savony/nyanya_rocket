@@ -38,7 +38,9 @@ dependencies:
   
   url_launcher: ^5.0.2
 
-  soundpool: ^0.5.0
+  soundpool:
+    git:
+      url: git://github.com/CaramelDunes/soundpool.git
 
 dev_dependencies:
   flutter_test:
